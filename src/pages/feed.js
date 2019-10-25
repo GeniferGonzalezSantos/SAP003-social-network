@@ -1,4 +1,4 @@
-import Button from '../components/button.js';
+import ButtonFeed from '../components/button-feed.js';
 import Textarea from '../components/textarea.js';
 import Card from '../components/card.js';
 
@@ -40,8 +40,8 @@ function templatePosts(publicacao, id) {
   const template = `
     <article id='${id}'>
       <p data-id='${id}'>${publicacao}</p>
-      ${Button({ title: 'Deletar', onClick: deletarPost })}
-      ${Button({ title: 'Editar', onClick: editarPost })}
+      ${ButtonFeed({ title: 'Deletar', onClick: deletarPost })}
+      ${ButtonFeed({ title: 'Editar', onClick: editarPost })}
     </article>
   `;
   return `${Card({ children: template, id })}`;
@@ -55,11 +55,14 @@ function postarPublicacao() {
     publicacao: document.querySelector('.post').value,
     id: new Date().getTime(),
   };
+
   posts.unshift(post);
+
   window.localStorage.setItem('cadastro', JSON.stringify(usuarioTotal));
   document.querySelector('.post').value = '';
   document.getElementById('post').innerHTML = posts.map(elem => templatePosts(elem.publicacao, elem.id)).join('');
 }
+
 
 function mostrarPublicacao() {
 
@@ -77,10 +80,11 @@ function logout() {
 
 
 function feed() {
+  // retirar classe main do elemento main
   const template = `
-    ${Button({ title: 'Sair', onClick: logout })}
+    ${ButtonFeed({ title: 'Sair', onClick: logout })}
     ${Textarea({ class: 'post' })}
-    ${Button({ title: 'Compartilhar', onClick: postarPublicacao })}
+    ${ButtonFeed({ title: 'Compartilhar', onClick: postarPublicacao })}
     <p id='post'></p>
   `;
   return template;
@@ -88,11 +92,6 @@ function feed() {
 
 window.templatePosts = templatePosts;
 window.postarPublicacao = postarPublicacao;
-
-window.exibirPublicacao = exibirPublicacao;
-
-export default feed;
-
 window.mostrarPublicacao = mostrarPublicacao;
 
 
