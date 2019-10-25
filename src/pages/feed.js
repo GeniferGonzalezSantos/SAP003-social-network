@@ -55,17 +55,13 @@ function postarPublicacao() {
     publicacao: document.querySelector('.post').value,
     id: new Date().getTime(),
   };
-
   posts.unshift(post);
-
   window.localStorage.setItem('cadastro', JSON.stringify(usuarioTotal));
   document.querySelector('.post').value = '';
   document.getElementById('post').innerHTML = posts.map(elem => templatePosts(elem.publicacao, elem.id)).join('');
 }
 
-
 function mostrarPublicacao() {
-
   const usuarioTotal = JSON.parse(localStorage.getItem('cadastro'));
   const usuarioAtual = JSON.parse(localStorage.getItem('usuario'));
   const posts = usuarioTotal[usuarioAtual].posts;
@@ -77,7 +73,6 @@ function logout() {
   localStorage.removeItem('usuario');
   window.location.hash='#home';
 }
-
 
 function feed() {
   // retirar classe main do elemento main
@@ -93,6 +88,5 @@ function feed() {
 window.templatePosts = templatePosts;
 window.postarPublicacao = postarPublicacao;
 window.mostrarPublicacao = mostrarPublicacao;
-
 
 export default feed;

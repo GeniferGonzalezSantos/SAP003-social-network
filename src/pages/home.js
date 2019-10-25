@@ -1,7 +1,6 @@
 import Button from '../components/button.js';
 import Input from '../components/input.js';
 
-
 function pegarInput() {
   const email = document.querySelector('.js-email').value;
   const senha = document.querySelector('.js-senha').value;
@@ -21,7 +20,6 @@ function pegarInput() {
   document.getElementById('erro').innerHTML = 'Usuario ou senha invalido!';
   return false;
 }
-
 
 function logar() {
   const template = `
@@ -45,9 +43,4 @@ function logar() {
 `;
   return template;
 }
-
-// window.home = {
-//   dados: JSON.parse(localStorage.getItem('cadastro'))
-// };
-
 export default logar;

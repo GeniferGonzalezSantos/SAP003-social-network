@@ -13,7 +13,6 @@ function locationHashChanged() {
       break;
     case '#feed':
       document.querySelector('main').innerHTML = feed();
-      window.addEventListener('load', feed());
       window.mostrarPublicacao();
       break;
     default:
