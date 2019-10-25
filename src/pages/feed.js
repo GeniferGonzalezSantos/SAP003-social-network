@@ -71,7 +71,7 @@ function mostrarPublicacao() {
 
 function logout() {
   localStorage.removeItem('usuario');
-  window.location.hash='#home';
+  window.location.hash = '#home';
 }
 
 function feed() {
