@@ -2,7 +2,7 @@ function Textarea(props) {
   const template = `
   
     <textarea class = ${props.class} 
-    placeholder=${props.placeholder}>
+    placeholder= ${props.placeholder}>
     </textarea>
   
   `;

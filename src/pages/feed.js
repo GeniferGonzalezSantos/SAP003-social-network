@@ -78,7 +78,7 @@ function feed() {
   // retirar classe main do elemento main
   const template = `
     ${ButtonFeed({ title: 'Sair', onClick: logout })}
-    ${Textarea({ class: 'post' })}
+    ${Textarea({ class: 'post', placeholder: '' })}
     ${ButtonFeed({ title: 'Compartilhar', onClick: postarPublicacao })}
     <p id='post'></p>
   `;
