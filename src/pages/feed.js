@@ -69,20 +69,27 @@ function mostrarPublicacao() {
   document.getElementById('post').innerHTML = posts.map(elem => templatePosts(elem.publicacao, elem.id)).join('');
 }
 
-function logout() {
-  localStorage.removeItem('usuario');
-  window.location.hash = '#home';
-}
 
 function feed() {
   // retirar classe main do elemento main
   const template = `
-    ${ButtonFeed({ title: 'Sair', onClick: logout })}
-    ${Textarea({ class: 'post', placeholder: '' })}
-    ${ButtonFeed({ title: 'Compartilhar', onClick: postarPublicacao })}
-    <p id='post'></p>
+  <div class="container-feed">
+  <nav class='nav-bar'>
+  <img src="fotos/logob.png" alt="" class="logo">
+  <div class="sair">
+  ${ButtonFeed({ title: 'Sair', onClick: logout })}
+  </div>
+  </nav>
+  ${Textarea({ class: 'post', placeholder: 'Conta pra gente' })}
+  ${ButtonFeed({ title: 'Compartilhar', classe:'btn-feed', onClick: postarPublicacao })}
+  <p id='post'></p>
+  </div>
   `;
   return template;
+}
+function logout() {
+  localStorage.removeItem('usuario');
+  window.location.hash = '#home';
 }
 
 window.templatePosts = templatePosts;
@@ -90,3 +97,5 @@ window.postarPublicacao = postarPublicacao;
 window.mostrarPublicacao = mostrarPublicacao;
 
 export default feed;
+/* 
+<img src="fotos/log-out.svg" alt=""></img> */

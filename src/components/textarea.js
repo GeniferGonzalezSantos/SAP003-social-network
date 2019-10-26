@@ -2,7 +2,9 @@ function Textarea(props) {
   const template = `
   
     <textarea class = ${props.class} 
-    placeholder= ${props.placeholder}>
+    maxlength = "150" ${props.maxlength}
+    placeholder=${props.placeholder}>
+   
     </textarea>
   
   `;

@@ -1,13 +1,12 @@
-
 body { 
-  
   font-family: 'Montserrat', sans-serif;
   font-size: .7em;
   margin: 0px;
   padding: 0px;
+
 }
 
-.img-background{
+.img-background {
   background: #dcdcdc url("fotos/logo-half-2.png") no-repeat;
   height: 100vh;
   object-fit: cover;
