@@ -1,4 +1,4 @@
-import logar from './pages/home.js';
+import logar from './pages/login.js';
 import cadastrar from './pages/cadastro.js';
 import feed from './pages/feed.js';
 

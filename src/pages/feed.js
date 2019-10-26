@@ -1,6 +1,7 @@
 import ButtonFeed from '../components/button-feed.js';
 import Textarea from '../components/textarea.js';
 import Card from '../components/card.js';
+import ImgLink from '../components/img-link.js';
 
 function deletarPost(e) {
   const postId = parseInt(e.target.parentElement.id, 10);
@@ -55,10 +56,17 @@ function postarPublicacao() {
     publicacao: document.querySelector('.post').value,
     id: new Date().getTime(),
   };
+  //para não postar sem ter escrito nada
+  if(!post.length){
+    alert('posta ai caraio');
+    return false;
+  }
   posts.unshift(post);
   window.localStorage.setItem('cadastro', JSON.stringify(usuarioTotal));
   document.querySelector('.post').value = '';
   document.getElementById('post').innerHTML = posts.map(elem => templatePosts(elem.publicacao, elem.id)).join('');
+
+
 }
 
 function mostrarPublicacao() {
@@ -71,18 +79,19 @@ function mostrarPublicacao() {
 
 
 function feed() {
-  // retirar classe main do elemento main
   const template = `
   <div class="container-feed">
   <nav class='nav-bar'>
   <img src="fotos/logob.png" alt="" class="logo">
   <div class="sair">
-  ${ButtonFeed({ title: 'Sair', onClick: logout })}
+  ${ImgLink({ src:'/fotos/log-out.svg', onClick: logout })}
   </div>
   </nav>
-  ${Textarea({ class: 'post', placeholder: 'Conta pra gente' })}
+  <div class='post-container'>
+  ${Textarea({ class: 'post', placeholder: 'Conta pra gente'})}
   ${ButtonFeed({ title: 'Compartilhar', classe:'btn-feed', onClick: postarPublicacao })}
   <p id='post'></p>
+  </div>
   </div>
   `;
   return template;
