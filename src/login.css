@@ -3,11 +3,15 @@ body {
   
   font-family: 'Montserrat', sans-serif;
   font-size: .7em;
-  padding: 15px;
-  background: #dcdcdc url("fotos/logo-half-2.png") no-repeat fixed 50% 50%;
-
+  margin: 0px;
+  padding: 0px;
 }
 
+.img-background{
+  background: #dcdcdc url("fotos/logo-half-2.png") no-repeat;
+  height: 100vh;
+  object-fit: cover;
+}
 
 /*para celular*/
 

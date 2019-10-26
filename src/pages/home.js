@@ -23,7 +23,6 @@ function pegarInput() {
 
 function logar() {
   const template = `
- 
   <div class="container-login">
   <img src="fotos/base.png" alt="" >
   <div class="titulo">
