@@ -1,4 +1,5 @@
 body { 
+
   font-family: 'Montserrat', sans-serif;
   font-size: .7em;
   margin: 0px;
@@ -7,19 +8,20 @@ body {
 }
 
 .img-background {
+
   background: #dcdcdc url("fotos/logo-half-2.png") no-repeat;
+  background-position: bottom;
+  background-position: right;
+  background-position-y: 150px;
   height: 100vh;
-  object-fit: cover;
+  width: 100vw;
+
 }
 
-/*para celular*/
+.container-login {
 
-@media (max-width:780px) {
-
-.container-login{
-  
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
   
 }
@@ -28,19 +30,21 @@ img {
 
   align-items: center;
   height: 25%;
+  max-width: 200px;
   width:80%;
 
 }
 
-.titulo{
+.titulo {
+
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  margin-top: 60px;
 
 }
 
-.form{
+.form {
 
   display: flex;
   flex-direction: column;
@@ -49,48 +53,55 @@ img {
 }
 
 .primary-button {
+
   background-color: #fdef4e;
-  padding: 6px;
   border-radius: 25px;
-  font-weight: bold;
   border: none;
   cursor: pointer;
-  width: 240px;
+  font-weight: bold;
   height: 37px;
   margin-bottom: 10px;
+  padding: 6px;
+  width: 240px;
   
 }
+
 .primary-button:focus {
-  outline: none;
+
   border-bottom: 2px solid #4e8579;
+  outline: none;
+
 }
 
-a{
+a {
 
   color:#fdef4e;
+
 }
 
 .input {
 
   border: solid 1px;
+  border:none;
   border-radius: 25px;
   padding: 10px;
   margin-bottom: 20px;
   width: 220px;
-  border:none;
   
 }
 
 .input:focus {
-  outline: none;
+
   border-bottom: 2px solid #69a79a;
   border-radius: 25px;
+  outline: none;
 
 }
 
 .erro {
+
   color: red;
   text-align: center;
-}
 
 }
+

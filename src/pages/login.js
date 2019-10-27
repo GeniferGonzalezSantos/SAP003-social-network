@@ -23,23 +23,25 @@ function pegarInput() {
 
 function logar() {
   const template = `
-  <div class="container-login">
-  <img src="fotos/base.png" alt="" >
-  <div class="titulo">
-  <h1 id="title">Base Sustentabilidade</h1>
-  <h2>Bem-vindo</h2>
-  <p id="erro" class="erro"></p>
-  <form class="form">
-  ${Input({ class: 'js-email', placeholder: 'Email', type: 'email' })}
-  ${Input({ class: 'js-senha', placeholder: 'Senha', type: 'password' })}
-  ${Button({ title: 'Login', onClick: pegarInput })}
-  </form>
-  <p>Você já possui conta? Não, então <a href= '#cadastrar'>cadastre-se</a> aqui!</p>
-  </div>
-  </div>
-
-
+  <section>
+        <div class="container-login">
+          <img src="fotos/base.png" alt="">
+          <div class="titulo">
+            <h1 id="title">Base Sustentabilidade</h1>
+            <h2>Bem-vindo</h2>
+            <p id="erro" class="erro"></p>
+            <form class="form">
+              ${Input({ class: 'js-email', placeholder: 'Email', type: 'email' })}
+              ${Input({ class: 'js-senha', placeholder: 'Senha', type: 'password' })}
+              ${Button({ title: 'Login', onClick: pegarInput })}
+            </form>
+            <p>Você já possui conta? Não, então <a href='#cadastrar'>cadastre-se</a> aqui!</p>
+          </div>
+        </div>
+      </section>
 `;
+
   return template;
 }
+
 export default logar;

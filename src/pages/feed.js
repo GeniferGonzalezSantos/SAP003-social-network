@@ -39,11 +39,11 @@ function editarPost(e) {
 
 function templatePosts(publicacao, id) {
   const template = `
-    <article id='${id}'>
-      <p data-id='${id}'>${publicacao}</p>
+  <article id='${id}' class="artigo">
+    <p data-id='${id}'>${publicacao}</p>
       ${ButtonFeed({ title: 'Deletar', onClick: deletarPost })}
       ${ButtonFeed({ title: 'Editar', onClick: editarPost })}
-    </article>
+  </article>
   `;
   return `${Card({ children: template, id })}`;
 }
@@ -60,8 +60,6 @@ function postarPublicacao() {
   window.localStorage.setItem('cadastro', JSON.stringify(usuarioTotal));
   document.querySelector('.post').value = '';
   document.getElementById('post').innerHTML = posts.map(elem => templatePosts(elem.publicacao, elem.id)).join('');
-
-
 }
 
 function mostrarPublicacao() {
@@ -72,30 +70,30 @@ function mostrarPublicacao() {
   document.getElementById('post').innerHTML = posts.map(elem => templatePosts(elem.publicacao, elem.id)).join('');
 }
 
+function logout() {
+  localStorage.removeItem('usuario');
+  window.location.hash = '#home';
+}
 
 function feed() {
   const template = `
   <div class="container-feed">
   <nav class='nav-bar'>
-  <img src="fotos/logob.png" alt="" class="logo">
-  <div class="sair">
-  ${ImgLink({ src:'/fotos/log-out.svg', onClick: logout })}
-  </div>
+    <img src="fotos/logob.png" alt="" class="logo">
+    <div class="sair">
+      ${ImgLink({ src: '/fotos/log-out.svg', onClick: logout })}
+    </div>
   </nav>
   <div class='post-container'>
-  ${Textarea({ class: 'post', placeholder: 'Conta pra gente'})}
-  ${ButtonFeed({ title: 'Compartilhar', classe:'btn-feed', onClick: postarPublicacao })}
+    ${Textarea({ class: 'post', placeholder: 'Conta pra gente' })}
+    ${ButtonFeed({ title: 'Compartilhar', classe: 'btn-feed', onClick: postarPublicacao })}
   </div>
   <div class="userpost">
-  <p id='post'></p>
+    <p id='post'></p>
   </div>
-  </div>
+</div>
   `;
   return template;
-}
-function logout() {
-  localStorage.removeItem('usuario');
-  window.location.hash = '#home';
 }
 
 window.templatePosts = templatePosts;
@@ -103,5 +101,3 @@ window.postarPublicacao = postarPublicacao;
 window.mostrarPublicacao = mostrarPublicacao;
 
 export default feed;
-/* 
-<img src="fotos/log-out.svg" alt=""></img> */
