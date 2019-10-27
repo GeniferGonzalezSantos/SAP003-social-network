@@ -55,11 +55,14 @@ img {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  width: 240px;
+  height: 37px;
+  margin-bottom: 10px;
   
 }
 .primary-button:focus {
   outline: none;
-  border-bottom: 2px solid #69a79a;
+  border-bottom: 2px solid #4e8579;
 }
 
 a{
@@ -74,8 +77,17 @@ a{
   padding: 10px;
   margin-bottom: 20px;
   width: 220px;
+  border:none;
   
 }
+
+.input:focus {
+  outline: none;
+  border-bottom: 2px solid #69a79a;
+  border-radius: 25px;
+
+}
+
 .erro {
   color: red;
   text-align: center;

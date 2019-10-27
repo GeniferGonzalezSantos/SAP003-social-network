@@ -54,7 +54,6 @@
 .btn-feed {
 
   background-color: #dcdcdc;
-  /* padding: 6px; */
   border-radius: 10px;
   font-weight: bold;
   border: none;
@@ -68,13 +67,12 @@
   }
 
 .post-container{
-  height: 20vh;
-  width: 100%;
-  padding: 20px;
-  background-color: #69a79a;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+    height: 17vh;
+    width: 100%;
+    padding: 12px;
+    background-color: #69a79a;
+    display: flex;
+    flex-direction: column;
 }
 .post {
   margin-bottom: 10px;
@@ -89,19 +87,21 @@
 }
 
 .card {          
+  background-color: white;
   padding: 22px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
-  margin: 28px;
-  margin-bottom: 10px;
+  box-shadow: 0 5px 6px 0 rgba(0,0,0,.15);
   align-items: all .2s ease-in-out;
-  align-content: space-between;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: inherit;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
   
+.userpost {
+  width: 100vw;
+}
   
-  .card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    margin-bottom: 54px;
-  }
-
