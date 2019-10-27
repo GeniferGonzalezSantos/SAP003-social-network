@@ -57,9 +57,18 @@ function postarPublicacao() {
     id: new Date().getTime(),
   };
   posts.unshift(post);
-  window.localStorage.setItem('cadastro', JSON.stringify(usuarioTotal));
-  document.querySelector('.post').value = '';
-  document.getElementById('post').innerHTML = posts.map(elem => templatePosts(elem.publicacao, elem.id)).join('');
+  const textArea = document.querySelector('.post').value;
+  console.log(textArea);
+
+  if (textArea == '' || textArea.substr(0,1) == ' ') {
+    document.querySelector('.erro').innerHTML = 'Digite sua mensagem!';
+  } else if (textArea != ''){
+    window.localStorage.setItem('cadastro', JSON.stringify(usuarioTotal));
+    document.querySelector('.erro').innerHTML = '';
+    document.querySelector('.post').value = '';
+    document.getElementById('post').innerHTML = posts.map(elem => templatePosts(elem.publicacao, elem.id)).join('');
+
+  }
 }
 
 function mostrarPublicacao() {
