@@ -18,10 +18,9 @@ body {
 img { 
 
   align-items: center;
-  height: 25%;
   max-width: 200px;
   width:80%;
-  /* margin-top: 90px; */
+  
 }
 
 .titulo {

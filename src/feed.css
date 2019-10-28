@@ -53,18 +53,9 @@
   align-items: center;
   display: flex;
   height: 60px;
-  /* justify-content: center; */
-  width: 60px;
-
-}
-
-.sair-svg {
-
-  align-items: center;
-  display: flex;
-  height: 60px;
   justify-content: center;
   width: 40px;
+
 
 }
 
