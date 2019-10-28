@@ -7,7 +7,12 @@
   justify-content: center;
 
 }
-  
+
+.img-background {
+
+  background-image: #dcdcdc url("fotos/Mia1.png") no-repeat;
+
+} 
 .logo-cadastro {
 
   align-items: center;

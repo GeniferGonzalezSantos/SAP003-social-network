@@ -7,6 +7,10 @@ body {
 
 }
 
+p {
+  font-size: 150%;
+}
+
 .container-login {
 
   align-items: center;
@@ -21,7 +25,7 @@ img {
   height: 25%;
   max-width: 200px;
   width:80%;
-
+  margin-top: 90px;
 }
 
 .titulo {
@@ -29,7 +33,7 @@ img {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  margin-top: 90px;
 
 }
 
@@ -70,7 +74,6 @@ a {
 
 .input {
 
-  border: solid 1px;
   border:none;
   border-radius: 25px;
   padding: 10px;
@@ -92,5 +95,15 @@ a {
   color: red;
   text-align: center;
 
+}
+
+@media screen and (min-width: 800px){
+  .input {
+  width: 320px;
+}
+
+.primary-button{
+width: 340px;
+}
 }
 

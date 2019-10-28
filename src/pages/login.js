@@ -28,7 +28,6 @@ function logar() {
           <img src="fotos/base.png" alt="">
           <div class="titulo">
             <h1 id="title">Base Sustentabilidade</h1>
-            <h2>Bem-vindo</h2>
             <p id="erro" class="erro"></p>
             <form class="form">
               ${Input({ class: 'js-email', placeholder: 'Email', type: 'email' })}
