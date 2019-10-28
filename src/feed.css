@@ -59,37 +59,64 @@
 .sair-svg {
 
   height: auto;
-  width: 75%;
+  width: 55%;
+  align-content: left;
 
 }
 
-.btn-feed {
+.btn-card2 {
 
-  background-color: #dcdcdc;
+  background-color: #dcdcdc94;
   border-radius: 10px;
   border: none;
   font-weight: bold;
   margin: 0 10px;
   padding: 10px;
+
+}
+
+.btn-card {
+
+  background-color: #dcdcdc94;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 10px;
+  margin-left: 50%;
+}
+
+.btn-feed {
+  
+  background-color: #dcdcdc94;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  margin: 10px 20px 10px 20px;
+  padding: 10px;
   
 }
 
-.btn-feed:focus {
-
-  border-bottom: 2px solid #69a79a;
-  outline: none;
-  
-}
 
 .post-container {
 
   background-color: #69a79a;
   display: flex;
   flex-direction: column;
-  height: 17vh;
-  padding: 12px;
   width: 100%;
 
+}
+
+.img-background {
+
+  background: #dcdcdc url("fotos/logo-half-2.png") scroll no-repeat;
+  background-size: 90%;
+  background-position: right;
+  background-position-y: 550px;
+  height: 100vh;
+  width: auto;
+  background-attachment: fixed;
+  
 }
 
 .post {
@@ -99,18 +126,17 @@
   border-radius: 10px;
   display: flex;
   height: 70px;
-  height: 5vh;
-  margin: 10px;
+  margin: 10px 20px;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 20px;
   
 }
 
 .card {   
 
-  align-items: center;
-  align-items: all .2s ease-in-out;
-  background-color: white;
+  /* align-items: left; */
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.493);
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 0 5px 6px 0 rgba(0,0,0,.15);
@@ -119,6 +145,7 @@
   margin: 10px;
   padding: 22px;
   width: inherit;
+  font-size: 150%;
 
 }
   
@@ -128,7 +155,7 @@
 
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 812px){
 
 .post {
 
@@ -142,6 +169,15 @@
   display: flex;
   flex-direction: row;
 
+}
+
+.btn-card {
+
+  height: 50px;
+  margin: 10px;
+  width: 10%;
+  margin-left: 70%;
+  
 }
 
 .btn-feed {
@@ -163,6 +199,25 @@
 .artigo:nth-last-child(2) {
 
   justify-content: flex-end;
+
+}
+
+.img-background {
+
+  background: #dcdcdc url("fotos/logo-half-2.png") no-repeat;
+  /* background-size: 90%; */
+  background-position: right;
+  background-position-y: 180px;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.btn-card2 {
+
+  height: 50px;
+  margin: 10px;
+  width: 10%;
 
 }
 

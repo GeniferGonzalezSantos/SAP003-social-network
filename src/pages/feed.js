@@ -1,4 +1,6 @@
 import ButtonFeed from '../components/button-feed.js';
+import ButtonCard2 from '../components/Button2.js';
+import ButtonCard from '../components/button-card.js';
 import Textarea from '../components/textarea.js';
 import Card from '../components/card.js';
 import ImgLink from '../components/img-link.js';
@@ -41,8 +43,8 @@ function templatePosts(publicacao, id) {
   const template = `
   <article id='${id}' class="artigo">
     <p data-id='${id}'>${publicacao}</p>
-      ${ButtonFeed({ title: 'Deletar', onClick: deletarPost })}
-      ${ButtonFeed({ title: 'Editar', onClick: editarPost })}
+      ${ButtonCard({ title: 'Deletar', onClick: deletarPost })}
+      ${ButtonCard2({ title: 'Editar', onClick: editarPost })}
   </article>
   `;
   return `${Card({ children: template, id })}`;
@@ -93,7 +95,7 @@ function feed() {
   </nav>
   <div class='post-container'>
     ${Textarea({ class: 'post', placeholder: 'Conta pra gente' })}
-    ${ButtonFeed({ title: 'Compartilhar', classe: 'btn-feed', onClick: postarPublicacao })}
+    ${ButtonFeed({ title: 'Compartilhar', class: 'btn-feed', onClick: postarPublicacao })}
   </div>
   <div class="userpost">
     <p id='post'></p>
