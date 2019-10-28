@@ -26,7 +26,7 @@ function pegarInput() {
 function cadastrar() {
   const template = `
   <section>
-        <div class="container-cadastro">
+  <div class="container-cadastro">
           <img src="fotos/base.png" alt="">
           <div class="logo-cadastro">
             <h1 id="title">Base Sustentabilidade</h1>

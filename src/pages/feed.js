@@ -94,7 +94,7 @@ function feed() {
     </div>
   </nav>
   <div class='post-container'>
-    ${Textarea({ class: 'post', placeholder: 'Conta pra gente' })}
+    ${Textarea({ class: 'post', placeholder: 'Soltaavoz' })}
     ${ButtonFeed({ title: 'Compartilhar', class: 'btn-feed', onClick: postarPublicacao })}
   </div>
   <div class="userpost">

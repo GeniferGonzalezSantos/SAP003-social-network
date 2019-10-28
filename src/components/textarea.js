@@ -4,7 +4,7 @@ function Textarea(props) {
     <textarea class = ${props.class} 
    
     maxlength = "150" ${props.maxlength}
-    placeholder=${props.placeholder}>
+    placeholder= ${props.placeholder}>
     </textarea>
   
   `;
