@@ -34,7 +34,7 @@ function cadastrar() {
             <form class="cadastro">
               ${Input({ class: 'js-email', placeholder: 'Email', type: 'email' })}
               ${Input({ class: 'js-nome', placeholder: 'Nome completo', type: 'text' })}
-              ${Input({ class: 'js-senha', placeholder: 'senha', type: 'password' })}
+              ${Input({ class: 'js-senha', placeholder: 'Senha', type: 'password' })}
               ${Button({ title: 'Cadastre-se', onClick: pegarInput })}
               <p class='text'>Você já está registrado? Então venha
               <a href='#home'> logar</a> e fazer parte de um mundo
