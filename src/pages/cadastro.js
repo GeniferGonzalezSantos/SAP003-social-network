@@ -36,9 +36,8 @@ function cadastrar() {
               ${Input({ class: 'js-nome', placeholder: 'Nome completo', type: 'text' })}
               ${Input({ class: 'js-senha', placeholder: 'Senha', type: 'password' })}
               ${Button({ title: 'Cadastre-se', onClick: pegarInput })}
-              <p class='text'>Você já está registrado? Então venha
-              <a href='#home'> logar</a> e fazer parte de um mundo
-              mais sustentável.</p>
+              <p class='text'>Já é cadastrado? Então
+              <a href='#home'> entre</a> para revolucionar!</p>
             </form>
           </div>
         </div>
