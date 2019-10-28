@@ -34,7 +34,7 @@ function logar() {
               ${Input({ class: 'js-senha', placeholder: 'Senha', type: 'password' })}
               ${Button({ title: 'Login', onClick: pegarInput })}
             </form>
-            <p>Você já possui conta? Não, então <a href='#cadastrar'>cadastre-se</a> aqui!</p>
+            <p class = "ajuste">Você já possui conta? Não, então <a href='#cadastrar'>cadastre-se</a> aqui!</p>
           </div>
         </div>
       </section>
