@@ -3,23 +3,38 @@ import Button from '../components/button.js';
 
 function pegarInput() {
   let dadoslocal = JSON.parse(localStorage.getItem('cadastro'));
+  const validateEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+/;
+  const email = document.querySelector('.js-email').value;
+  const senha = document.querySelector('.js-senha').value
 
-  const dados = {
-    email: document.querySelector('.js-email').value,
-    nome: document.querySelector('.js-nome').value,
-    senha: document.querySelector('.js-senha').value,
-    posts: [],
-  };
+  const isValid = email.match(validateEmail);
+ 
+  if(isValid && senha.length >= 6){
+    const dados = {
+      email,
+      nome: document.querySelector('.js-nome').value,
+      senha,
+      posts: [],
+    };
+  
+    if (!dadoslocal) {
+      dados.id = 0;
+      dadoslocal = [dados];
+    } else {
+      dados.id = dadoslocal.length;
+      dadoslocal.push(dados);
+    }
+    window.localStorage.setItem('cadastro', JSON.stringify(dadoslocal));
+    window.location.hash = '#home';
 
-  if (!dadoslocal) {
-    dados.id = 0;
-    dadoslocal = [dados];
-  } else {
-    dados.id = dadoslocal.length;
-    dadoslocal.push(dados);
+  } else if (!isValid) {
+    alert('email inválido')
+  } else if (senha.length <= 6){
+    alert('senha pequena')
+
   }
-  window.localStorage.setItem('cadastro', JSON.stringify(dadoslocal));
-  window.location.hash = '#home';
+
+
 }
 
 

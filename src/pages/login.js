@@ -7,18 +7,17 @@ function pegarInput() {
   const dados = JSON.parse(localStorage.getItem('cadastro'));
   const logado = dados.filter((d) => {
     if (d.email === email && d.senha === senha) {
+      console.log(d)
       return d;
     }
     return null;
   })[0];
 
-  if (logado) {
-    localStorage.setItem('usuario', JSON.stringify(logado.id));
-    window.location.hash = '#feed';
-    return true;
-  }
-  document.getElementById('erro').innerHTML = 'Usuario ou senha invalido!';
-  return false;
+  logado ? (
+    localStorage.setItem('usuario', JSON.stringify(logado.id)),
+    window.location.hash = '#feed'
+  ) : (document.getElementById('erro').innerHTML = 'Usuario ou senha invalido!')
+    
 }
 
 function logar() {
