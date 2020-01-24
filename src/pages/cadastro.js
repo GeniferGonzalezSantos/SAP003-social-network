@@ -3,14 +3,14 @@ import Button from '../components/button.js';
 
 function registerData() {
   let dadoslocal = JSON.parse(localStorage.getItem('cadastro'));
-  const validateEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+);
+  const validateEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+/;
   const email = document.querySelector('.input').value;
   const senha = document.querySelector('.input').value
 
-
   const isValid = email.match(validateEmail);
   console.log(isValid);
-  
+  console.log(validateEmail);
+
 
   if (isValid && senha.length >= 6) {
     const dados = {
@@ -34,10 +34,7 @@ function registerData() {
     alert('email inválido')
   } else if (senha.length <= 6) {
     alert('senha pequena')
-
   }
-
-
 }
 
 
