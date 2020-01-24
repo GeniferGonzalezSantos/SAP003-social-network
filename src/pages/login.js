@@ -6,33 +6,21 @@ function login() {
   const senha = document.querySelector('.input').value;
   const dados = JSON.parse(localStorage.getItem('cadastro'));
   const logado = dados.filter((d) => {
-    if (d.email === email && d.senha === senha) {
-      return d;
-    }
-    return null;
-  })[0];
-
-   const lala = '@';
-  if(email.indexOf(lala)>=-1){
-     console.log('foi');
-     
-   }else{
-     console.log('nada');
-     
-   }
-     
+     (d.email === email && d.senha === senha) ?
+       d : null
+       console.log(d)
+  [0];
+  },
 
   document.addEventListener('keypress', function (e) {
     (e.which == 13) ? login() : false;
-  });
+  }));
 
-  if (logado) {
-    localStorage.setItem('usuario', JSON.stringify(logado.id));
-    window.location.hash = '#feed';
-    return true;
-  }
-  document.getElementById('erro').innerHTML = alert('Usuário ou senha inválida, tente novamente.');
-  return false;
+  logado ? (
+    localStorage.setItem('usuario', JSON.stringify(logado.id)),
+    window.location.hash = '#feed'
+  ) : (document.getElementById('erro').innerHTML = 'Usuario ou senha invalido!')
+    
 }
 
 
