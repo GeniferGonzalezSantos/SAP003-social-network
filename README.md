@@ -9,7 +9,7 @@
 * [5. Autoria e Considerações](#5-autoria-e-considerações)
 ***
 
-<img src='fotos/logob.png'>
+![logo](src/fotos/logob.png)
 
 ## 1.O Projeto
 
