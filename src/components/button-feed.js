@@ -1,7 +1,7 @@
 function ButtonFeed(props) {
   const template = `
       <button 
-        class="btn-feed" 
+        class='${props.class}' 
         onclick="button.handleClick(event, ${props.onClick})" >
         ${props.title}
       </button>

@@ -1,13 +1,13 @@
 import Input from '../components/input.js';
 import Button from '../components/button.js';
 
-function pegarInput() {
+function registerData() {
   let dadoslocal = JSON.parse(localStorage.getItem('cadastro'));
 
   const dados = {
-    email: document.querySelector('.js-email').value,
-    nome: document.querySelector('.js-nome').value,
-    senha: document.querySelector('.js-senha').value,
+    email: document.querySelector('.input').value,
+    nome: document.querySelector('.input').value,
+    senha: document.querySelector('.input').value,
     posts: [],
   };
 
@@ -23,19 +23,18 @@ function pegarInput() {
 }
 
 
-function cadastrar() {
+function register() {
   const template = `
   <section>
   <div class="container-cadastro">
-          <img src="fotos/base.png" alt="">
+          <img src="fotos/base.png" alt="Logo da Base" class='img-logo'>
           <div class="logo-cadastro">
-            <h1 id="title">Base Sustentabilidade</h1>
             <h2>Preencha para se cadastrar</h2>
             <form class="cadastro">
-              ${Input({ class: 'js-email', placeholder: 'Email', type: 'email' })}
-              ${Input({ class: 'js-nome', placeholder: 'Nome completo', type: 'text' })}
-              ${Input({ class: 'js-senha', placeholder: 'Senha', type: 'password' })}
-              ${Button({ title: 'Cadastre-se', onClick: pegarInput })}
+              ${Input({ class: 'input', placeholder: 'Email', type: 'email' })}
+              ${Input({ class: 'input', placeholder: 'Nome completo', type: 'text' })}
+              ${Input({ class: 'input', placeholder: 'Senha', type: 'password' })}
+              ${Button({ title: 'Cadastre-se', onClick: registerData, class: 'primary-button' })}              
               <p class='text'>Já é cadastrado? Então
               <a href='#home'> entre</a> para revolucionar!</p>
             </form>
@@ -47,4 +46,4 @@ function cadastrar() {
   return template;
 }
 
-export default cadastrar;
+export default register;

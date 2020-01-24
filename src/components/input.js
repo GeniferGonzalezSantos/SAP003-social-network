@@ -1,9 +1,9 @@
 function Input(props) {
   const template = `
-    <input class="input ${props.class}" 
-      
+    <input class='${props.class}' 
       placeholder=${props.placeholder} 
-      type=${props.type}  
+      type=${props.type}
+      required  
     >
   `;
   return template;

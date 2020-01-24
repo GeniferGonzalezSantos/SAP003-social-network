@@ -43,11 +43,11 @@ function templatePosts(publicacao, id) {
   const template = `
   <article id='${id}' class="artigo">
     <p data-id='${id}'>${publicacao}</p>
-      ${ButtonCard({ title: 'Deletar', onClick: deletarPost })}
-      ${ButtonCard2({ title: 'Editar', onClick: editarPost })}
+      ${ButtonCard({ title: 'Deletar', onClick: deletarPost, class:'btn-card' })}
+      ${ButtonCard2({ title: 'Editar', onClick: editarPost, class:'btn-card2' })}
   </article>
   `;
-  return `${Card({ children: template, id })}`;
+  return `${Card({ children: template, id, class:'card' })}`;
 }
 
 function postarPublicacao() {
@@ -90,7 +90,7 @@ function feed() {
   <nav class='nav-bar'>
     <img src="fotos/logob.png" alt="" class="logo">
     <div class="sair">
-      ${ImgLink({ src: '/fotos/log-out.svg', onClick: logout })}
+      ${ImgLink({ src: '/fotos/log-out.svg', onClick: logout, class:'img-sair' })}
     </div>
   </nav>
   <div class='post-container'>

@@ -1,7 +1,8 @@
 function Button(props) {
   const template = `
     <button 
-      class='primary-button' 
+      type='${props.type}'
+      class='${props.class}' 
       onclick="button.handleClick(event, ${props.onClick})" >
       ${props.title}
     </button>
