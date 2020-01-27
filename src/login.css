@@ -7,6 +7,7 @@ body {
   background-position: contain;
   background-repeat: no-repeat;
   background-color: #dcdcdc;
+
 }
 
 .container-login {
@@ -58,12 +59,13 @@ a {
   font-weight: bold;
 }
 
-.input {
+.input, .input-e, .input-n, .input-s{
   border:none;
   border-radius: 25px;
   padding: 10px;
   margin-bottom: 20px;
   width: 220px;
+
 }
 
 .input:focus {
@@ -73,24 +75,21 @@ a {
 }
 
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 825px){
 
   body {
     font-size: 1em;
     background-position: right;
     background-size: contain;
     background-position-x: right;
-/*     background-repeat: repeat-x;
- */    
+    background-repeat: no-repeat;   
   }
 
   .img-logo { 
     max-width: 300px;
     margin: 2%;
-   
   }
   
-
   .input {
     width: 320px;
   }
@@ -98,7 +97,7 @@ a {
   .primary-button {
    width: 340px;
   }
-
+  
   a {
     color:#4e8579;
     font-weight: bold;

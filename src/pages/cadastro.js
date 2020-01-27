@@ -2,20 +2,24 @@ import Input from '../components/input.js';
 import Button from '../components/button.js';
 
 function registerData() {
+
   let dadoslocal = JSON.parse(localStorage.getItem('cadastro'));
   const validateEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+/;
-  const email = document.querySelector('.input').value;
-  const senha = document.querySelector('.input').value
+  const name =  document.querySelector('.input-n').value;
+  const email = document.querySelector('.input-e').value;
+  const senha = document.querySelector('.input-s').value;
 
   const isValid = email.match(validateEmail);
   console.log(isValid);
   console.log(validateEmail);
+  console.log(email)
+  console.log(name)
 
 
   if (isValid && senha.length >= 6) {
     const dados = {
       email,
-      nome: document.querySelector('.input').value,
+      name,
       senha,
       posts: [],
     };
@@ -46,9 +50,9 @@ function register() {
           <div class="logo-cadastro">
             <h2>Preencha para se cadastrar</h2>
             <form class="cadastro">
-              ${Input({ class: 'input', placeholder: 'Nome completo', type: 'text' })}
-              ${Input({ class: 'input', placeholder: 'Email', type: 'email' })}
-              ${Input({ class: 'input', placeholder: 'Senha', type: 'password' })}
+              ${Input({ class: 'input-n', placeholder: 'Nome completo', type: 'text' })}
+              ${Input({ class: 'input-e', placeholder: 'Email', type: 'email' })}
+              ${Input({ class: 'input-s', placeholder: 'Senha', type: 'password' })}
               ${Button({ title: 'Cadastre-se', onClick: registerData, class: 'primary-button' })}              
               <p class='text'>Já é cadastrado? Então
               <a href='#home'> entre</a> para revolucionar!</p>

@@ -1,7 +1,8 @@
+
 function Input(props) {
   const template = `
     <input class='${props.class}' 
-      placeholder=${props.placeholder} 
+      placeholder=${props.placeholder}
       type=${props.type}
       required  
     >
@@ -9,4 +10,4 @@ function Input(props) {
   return template;
 }
 
-export default Input;
+export default  Input;
