@@ -90,7 +90,7 @@ function feed() {
   <nav class='nav-bar'>
     <img src="fotos/logob.png" alt="" class="logo">
     <div class="sair">
-      ${ImgLink({ src: '/fotos/log-out.svg', onClick: logout, class:'img-sair' })}
+      ${ImgLink({ src: './fotos/log-out.png', onClick: logout, class:'img-sair' })}
     </div>
   </nav>
   <div class='post-container'>

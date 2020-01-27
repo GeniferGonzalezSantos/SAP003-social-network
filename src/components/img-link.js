@@ -1,7 +1,7 @@
 function ImgLink(props) {
   const template = `
     <div class='${props.class}'>
-    <img class="sair-svg" onclick="div.handleClick(event, ${props.onClick})"   
+    <img class="img-sair" onclick="div.handleClick(event, ${props.onClick})"   
     src=${props.src}>
   </div>
       `;
