@@ -1,7 +1,7 @@
 function ButtonCard2(props) {
   const template = `
           <button 
-            class="btn-card2" 
+            class='${props.class}' 
             onclick="button.handleClick(event, ${props.onClick})" >
             ${props.title}
           </button>

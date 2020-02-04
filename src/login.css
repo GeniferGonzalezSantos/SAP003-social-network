@@ -1,48 +1,46 @@
 body { 
-
   font-family: 'Montserrat', sans-serif;
-  font-size: .7em;
-  margin: 0px;
-  padding: 0px;
+  font-size: .9em;
+  margin:0;
+  padding: 0;
+  background-image: url('fotos/logo-half-2.png');
+  background-position: contain;
+  background-repeat: no-repeat;
+  background-color: #dcdcdc;
+  background-size: 100% 100%;
+  background-position-y: 40px;
 
 }
 
 .container-login {
-
   align-items: center;
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
 }
 
-img { 
-
-  align-items: center;
+.img-logo { 
   max-width: 200px;
-  width:80%;
-  
+  margin: 5%;
+  width:90%;
+  align-items: center;
+  justify-content: center;
 }
 
 .titulo {
-
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
-
+  margin-top: 30px;
 }
 
 .form {
-
   display: flex;
   flex-direction: column;
   margin-bottom: 10%;
- 
 }
 
 .primary-button {
-
-  background-color: #fdef4e;
+  background-color: #fdee4e;
   border-radius: 25px;
   border: none;
   cursor: pointer;
@@ -50,55 +48,62 @@ img {
   height: 37px;
   margin-bottom: 10px;
   padding: 6px;
-  width: 240px;
-  
+  width: 240px;  
 }
 
 .primary-button:focus {
-
   border-bottom: 2px solid #4e8579;
   outline: none;
-
 }
 
 a {
-
-  color:#fdef4e;
-
+  color:#fdee4e;
+  font-weight: bold;
 }
 
-.input {
-
+.input, .input-e, .input-n, .input-s{
   border:none;
   border-radius: 25px;
   padding: 10px;
   margin-bottom: 20px;
   width: 220px;
-  
+
 }
 
-.input:focus {
-
+.input:focus, .input-e:focus, .input-n:focus, .input-s:focus {
   border-bottom: 2px solid #69a79a;
   border-radius: 25px;
   outline: none;
-
 }
 
-.erro {
 
-  color: red;
-  text-align: center;
+@media screen and (min-width: 825px){
 
-}
+  body {
+    font-size: 1em;
+    background-position: right;
+    background-size: contain;
+    background-position-x: right;
+    background-repeat: no-repeat;   
+  }
 
-@media screen and (min-width: 800px){
-  .input {
-  width: 320px;
-}
+  .img-logo { 
+    max-width: 300px;
+    margin: 2%;
+  }
+  
+  .input-e, .input-s, .input-n {
+    width: 320px;
+  }
 
-.primary-button{
-width: 340px;
-}
+  .primary-button {
+   width: 340px;
+  }
+  
+  a {
+    color:#4e8579;
+    font-weight: bold;
+  }
+
 }
 

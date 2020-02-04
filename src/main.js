@@ -1,12 +1,12 @@
 import logar from './pages/login.js';
-import cadastrar from './pages/cadastro.js';
+import register from './pages/cadastro.js';
 import feed from './pages/feed.js';
 
 function locationHashChanged() {
   const paginas = (window.location.hash) ? window.location.hash : '#home';
   switch (paginas) {
     case '#cadastrar':
-      document.querySelector('main').innerHTML = cadastrar();
+      document.querySelector('main').innerHTML = register();
       break;
     case '#home':
       document.querySelector('main').innerHTML = logar();
